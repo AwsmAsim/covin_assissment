@@ -1,0 +1,35 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+#google-signin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    background-color: #f1f1f1;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+#google-signin-button img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.welcome-text {
+    font-family: 'Poppins', sans-serif;
+    /* font-size: 36px; */
+    color: #4285F4; /* Google Blue color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <title>Events Page</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #FFFFFF; /* White */
+            /* margin-top: 250px; */
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        h1 {
+            font-size: 32px;
+            color: #000000; /* Google Black */
+        }
+
+        .event-container {
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        .event-date {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event-box {
+            color: #FFFFFF; /* White */
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .event-box h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .event-box p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>These are your events:</h1>
+
+    <div class="event-container">
+        <div class="event-date">28 May, 2023</div>
+        <div class="event-box" style="background-color: #4285F4;"> <!-- Random Google Blue -->
+            <h3>Event 1</h3>
+            <p>Description: Lorem ipsum dolor sit amet.</p>
+            <p>Start Time: 10:00 AM</p>
+            <p>End Time: 11:00 AM</p>
+            <p>Location: Google Office</p>
+        </div>
+        <div class="event-box" style="background-color: #DB4437;"> <!-- Random Google Red -->
+            <h3>Event 2</h3>
+            <p>Description: Consectetur adipiscing elit.</p>
+            <p>Start Time: 2:00 PM</p>
+            <p>End Time: 3:30 PM</p>
+            <p>Location: Conference Room</p>
+        </div>
+        <!-- Add more event boxes for this date if needed -->
+    </div>
+
+    <div class="event-container">
+        <div class="event-date">29 May, 2023</div>
+        <div class="event-box" style="background-color: #0F9D58;"> <!-- Random Google Green -->
+            <h3>Event 3</h3>
+            <p>Description: Sed do eiusmod tempor incididunt.</p>
+            <p>Start Time: 9:00 AM</p>
+            <p>End Time: 10:30 AM</p>
+            <p>Location: Auditorium</p>
+        </div>
+        <div class="event-box" style="background-color: #F4B400;"> <!-- Random Google Yellow -->
+            <h3>Event 4</h3>
+            <p>Description: Ut labore et dolore magna aliqua.</p>
+            <p>Start Time: 1:30 PM</p>
+            <p>End Time: 2:30 PM</p>
+            <p>Location: Meeting Room A</p>
+        </div>
+        <div class="event-box" style="background-color: #AB47BC;"> <!-- Random Google Purple -->
+            <h3>Event 5</h3>
+            <p>Description: Quis nostrud exercitation ullamco laboris.</p>
+            <p>Start Time: 4:00 PM</p>
+            <p>End Time: 5:30 PM</p>
+            <p>Location: Seminar Hall</p>
+        </div>
+        <!-- Add more event boxes for this date if needed -->
+    </div>
+</body>
+</html>

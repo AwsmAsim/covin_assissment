@@ -1,0 +1,29 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'style.css' %}" type="text/css">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h1 class="welcome-text">Welcome to G Calendar app!</h1>
+
+    <button onclick="signInWithGoogle()" id="google-signin-button">
+        <img src="{% static 'google-icon.png' %}" alt="Google Icon">
+        <span>Login with Google</span>
+    </button>
+
+    <script>
+        function signInWithGoogle() {
+            // Implement the Google Sign-In functionality here
+            // You can use the Google Sign-In API or redirect the user to the Google Sign-In page
+        }
+    </script>
+</body>
+</html>
