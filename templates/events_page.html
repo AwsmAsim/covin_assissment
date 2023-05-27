@@ -23,20 +23,24 @@
         }
 
         .event-container {
-            margin-bottom: 20px;
+            margin-bottom: 35px;
             width: 100%;
         }
 
         .event-date {
             font-size: 20px;
-            margin-bottom: 10px;
+            margin-bottom: 25px;
         }
 
         .event-box {
-            color: #FFFFFF; /* White */
-            padding: 10px;
+            border-radius: 50px;
+background: #ffffff;
+box-shadow: inset 5px 5px 10px #e3e3e3,
+            inset -5px -5px 10px #ffffff;
+            color: black; /* White */
+            padding: 25px;
             margin-bottom: 20px;
-            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
         }
 
         .event-box h3 {
@@ -50,51 +54,26 @@
     </style>
 </head>
 <body>
-    <h1>These are your events:</h1>
 
-    <div class="event-container">
-        <div class="event-date">28 May, 2023</div>
-        <div class="event-box" style="background-color: #4285F4;"> <!-- Random Google Blue -->
-            <h3>Event 1</h3>
-            <p>Description: Lorem ipsum dolor sit amet.</p>
-            <p>Start Time: 10:00 AM</p>
-            <p>End Time: 11:00 AM</p>
-            <p>Location: Google Office</p>
-        </div>
-        <div class="event-box" style="background-color: #DB4437;"> <!-- Random Google Red -->
-            <h3>Event 2</h3>
-            <p>Description: Consectetur adipiscing elit.</p>
-            <p>Start Time: 2:00 PM</p>
-            <p>End Time: 3:30 PM</p>
-            <p>Location: Conference Room</p>
-        </div>
-        <!-- Add more event boxes for this date if needed -->
-    </div>
+    <h1 style="text-align: center; color: #4285F4;">These are your events:</h1>
 
+    
+    
+    {% for date, event_list in events.items %}
     <div class="event-container">
-        <div class="event-date">29 May, 2023</div>
-        <div class="event-box" style="background-color: #0F9D58;"> <!-- Random Google Green -->
-            <h3>Event 3</h3>
-            <p>Description: Sed do eiusmod tempor incididunt.</p>
-            <p>Start Time: 9:00 AM</p>
-            <p>End Time: 10:30 AM</p>
-            <p>Location: Auditorium</p>
+        <div class="event-date">{{ date }}</div>
+        {% for event in event_list %}
+        <div class="event-box"> <!-- Random Google Blue -->
+            <h3>{{ event.summary }}</h3>
+            <p>Description: {{ event.description }}</p>
+            <p>Start Time: {{ event.start_time }}</p>
+            <p>End Time: {{ event.end_time }}</p>
+            <p>Location: {{ event.location }}</p>
         </div>
-        <div class="event-box" style="background-color: #F4B400;"> <!-- Random Google Yellow -->
-            <h3>Event 4</h3>
-            <p>Description: Ut labore et dolore magna aliqua.</p>
-            <p>Start Time: 1:30 PM</p>
-            <p>End Time: 2:30 PM</p>
-            <p>Location: Meeting Room A</p>
-        </div>
-        <div class="event-box" style="background-color: #AB47BC;"> <!-- Random Google Purple -->
-            <h3>Event 5</h3>
-            <p>Description: Quis nostrud exercitation ullamco laboris.</p>
-            <p>Start Time: 4:00 PM</p>
-            <p>End Time: 5:30 PM</p>
-            <p>Location: Seminar Hall</p>
-        </div>
-        <!-- Add more event boxes for this date if needed -->
+        {% endfor %}
     </div>
+    {% endfor %}
+    
+    
 </body>
 </html>
