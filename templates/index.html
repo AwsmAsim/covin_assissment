@@ -14,10 +14,11 @@
 
     <h1 class="welcome-text">Welcome to G Calendar app!</h1>
 
-    <button onclick="signInWithGoogle()" id="google-signin-button">
+    <button onclick="window.location.href='/rest/v1/calendar/init/'" id="google-signin-button">
         <img src="{% static 'google-icon.png' %}" alt="Google Icon">
         <span>Login with Google</span>
     </button>
+
 
     <script>
         function signInWithGoogle() {

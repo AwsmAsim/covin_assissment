@@ -18,6 +18,9 @@ from django.contrib import admin
 from django.urls import path
 from .views import home_page
 from .views import events_page
+from .views import GoogleCalendarInitView
+from .views import GoogleCalendarRedirectView
+from .views import oauth2callback
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -25,4 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('home/', home_page),
     path('events/', events_page),
+    path('rest/v1/calendar/init/', GoogleCalendarInitView),
+    path('oauth2callback/', oauth2callback, name='oauth2callback'),
+    path('rest/v1/calendar/redirect/', GoogleCalendarRedirectView),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
