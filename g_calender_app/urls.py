@@ -30,5 +30,5 @@ urlpatterns = [
     path('events/', events_page),
     path('rest/v1/calendar/init/', GoogleCalendarInitView),
     path('oauth2callback/', oauth2callback, name='oauth2callback'),
-    path('rest/v1/calendar/redirect/', GoogleCalendarRedirectView),
+    path('rest/v1/calendar/redirect/', GoogleCalendarRedirectView, name='GoogleCalendarRedirectView'),
 ] + static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
