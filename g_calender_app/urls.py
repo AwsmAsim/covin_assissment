@@ -26,6 +26,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', home_page),
     path('home/', home_page),
     path('events/', events_page),
     path('rest/v1/calendar/init/', GoogleCalendarInitView),
